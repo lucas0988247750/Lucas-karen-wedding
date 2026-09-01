@@ -127,8 +127,8 @@
                 <a href="#home" class="hover:text-[#d4a373] transition-colors py-1">關於我們</a>
                 <a href="#gallery" class="hover:text-[#d4a373] transition-colors py-1">婚紗藝廊</a>
                 <a href="#details" class="hover:text-[#d4a373] transition-colors py-1">婚禮詳情</a>
-                <a href="#transport" class="hover:text-[#d4a373] transition-colors py-1">交通指引</a>
                 <a href="#rsvp" class="hover:text-[#d4a373] transition-colors py-1">出席回函</a>
+                <a href="#transport" class="hover:text-[#d4a373] transition-colors py-1">交通指引</a>
             </div>
 
             <!-- 手機版選單按鈕 -->
@@ -144,8 +144,8 @@
             <a href="#home" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">關於我們</a>
             <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">婚紗藝廊</a>
             <a href="#details" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">婚禮詳情</a>
-            <a href="#transport" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">交通指引</a>
             <a href="#rsvp" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">出席回函</a>
+            <a href="#transport" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">交通指引</a>
         </div>
     </nav>
 
@@ -223,16 +223,16 @@
                         <img src="https://i.postimg.cc/tJbcpZN3/IMG-1152.jpg" alt="Gallery 1" class="gallery-img w-full h-full object-cover">
                     </div>
                 </div>
-                <!-- 照片 2 (已更新網址並採用 object-cover 放滿整個框框) -->
+                <!-- 照片 2 -->
                 <div class="gallery-item overflow-hidden rounded-2xl shadow-md bg-white p-2 border border-[#8da399]/20">
                     <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-100">
                         <img src="https://i.postimg.cc/zv7d80fN/IMG-1537.jpg" alt="Gallery 2" class="gallery-img w-full h-full object-cover">
                     </div>
                 </div>
-                <!-- 照片 3 (採用 object-cover 放滿整個框框) -->
+                <!-- 照片 3 (優化：使用 object-contain 且完整呈現不裁切) -->
                 <div class="gallery-item overflow-hidden rounded-2xl shadow-md bg-white p-2 border border-[#8da399]/20">
-                    <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-100">
-                        <img src="https://i.postimg.cc/sXp7Rx27/IMG-1700.jpg" alt="Gallery 3" class="gallery-img w-full h-full object-cover">
+                    <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-50 flex items-center justify-center p-3">
+                        <img src="https://i.postimg.cc/sXp7Rx27/IMG-1700.jpg" alt="Gallery 3" class="gallery-img max-w-full max-h-full object-contain">
                     </div>
                 </div>
             </div>
@@ -283,56 +283,6 @@
                     <p class="text-xs md:text-sm text-gray-500 tracking-widest leading-relaxed bg-[#fcfbf9] py-3 px-4 rounded-lg border border-[#8da399]/15">
                         建議穿搭色系：邀請您穿著上述主題色調或大地色系出席，與我們一同打造溫馨浪漫的婚禮氛圍。
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 交通指引 Accordion Section -->
-    <section id="transport" class="py-24 px-4 bg-[var(--bg-alt)]">
-        <div class="max-w-2xl mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="font-en text-[#d4a373] text-3xl italic mb-2">Location & Guidance</h3>
-                <p class="text-base tracking-widest text-gray-700 font-medium mb-1">交通指引</p>
-                <p class="text-sm tracking-widest text-gray-500">
-                    <span class="whitespace-nowrap">406臺中市北屯區崇德路二段347號</span>
-                </p>
-            </div>
-
-            <!-- 摺疊面板組 -->
-            <div class="space-y-4">
-                <!-- 高鐵 / 大眾運輸 -->
-                <div class="bg-white rounded-xl shadow-sm border border-[#8da399]/20 overflow-hidden transition-all">
-                    <button onclick="toggleAccordion(this)" class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="text-[#8da399] font-medium tracking-widest flex items-center gap-3 text-base">
-                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                            高鐵與大眾運輸
-                        </span>
-                        <svg class="acc-icon w-5 h-5 text-[#8da399] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="accordion-content bg-[var(--bg-base)]">
-                        <div class="px-6 py-5 text-gray-600 leading-relaxed border-t border-[#8da399]/10 tracking-wider text-sm md:text-base">
-                            搭乘高鐵至 <span class="whitespace-nowrap font-medium text-[#d4a373]">台中高鐵站</span>，轉乘計程車或公車至 <span class="whitespace-nowrap font-medium text-[#d4a373]">406臺中市北屯區崇德路二段347號</span>。
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 自行開車與停車 -->
-                <div class="bg-white rounded-xl shadow-sm border border-[#8da399]/20 overflow-hidden transition-all">
-                    <button onclick="toggleAccordion(this)" class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="text-[#8da399] font-medium tracking-widest flex items-center gap-3 text-base">
-                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
-                            自行開車資訊
-                        </span>
-                        <svg class="acc-icon w-5 h-5 text-[#8da399] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="accordion-content bg-[var(--bg-base)]">
-                        <div class="px-6 py-5 text-gray-600 leading-relaxed border-t border-[#8da399]/10 tracking-wider text-sm md:text-base space-y-2">
-                            <p>1. 行駛 <span class="whitespace-nowrap font-medium text-[#d4a373]">國道一號</span> 下 <span class="whitespace-nowrap font-medium text-[#d4a373]">大雅交流道</span>，往北屯方向行駛。</p>
-                            <p>2. 導航設定至 <span class="whitespace-nowrap font-medium text-[#d4a373]">406臺中市北屯區崇德路二段347號</span> 即可順利抵達。</p>
-                            <p class="pt-2 text-xs md:text-sm text-gray-500">※ 場館周邊設有停車指引，歡迎多加利用。</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -446,8 +396,65 @@
         </div>
     </section>
 
+    <!-- 交通指引 Accordion Section (已移至最下方並置入交通資訊圖片) -->
+    <section id="transport" class="py-24 px-4 bg-[var(--bg-alt)]">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="font-en text-[#d4a373] text-3xl italic mb-2">Location & Guidance</h3>
+                <p class="text-base tracking-widest text-gray-700 font-medium mb-1">交通指引</p>
+                <p class="text-sm tracking-widest text-gray-500">
+                    <span class="whitespace-nowrap">406臺中市北屯區崇德路二段347號</span>
+                </p>
+            </div>
+
+            <!-- 交通資訊圖片 (置於交通指引中間) -->
+            <div class="mb-8 rounded-2xl overflow-hidden shadow-md bg-white p-2 border border-[#8da399]/20">
+                <div class="overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-2">
+                    <img src="https://i.postimg.cc/L69pFWsj/jiao-tong-zi-xun.jpg" alt="交通資訊" class="w-full h-auto object-contain rounded-lg">
+                </div>
+            </div>
+
+            <!-- 摺疊面板組 -->
+            <div class="space-y-4">
+                <!-- 高鐵 / 大眾運輸 -->
+                <div class="bg-white rounded-xl shadow-sm border border-[#8da399]/20 overflow-hidden transition-all">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="text-[#8da399] font-medium tracking-widest flex items-center gap-3 text-base">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            高鐵與大眾運輸
+                        </span>
+                        <svg class="acc-icon w-5 h-5 text-[#8da399] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content bg-[var(--bg-base)]">
+                        <div class="px-6 py-5 text-gray-600 leading-relaxed border-t border-[#8da399]/10 tracking-wider text-sm md:text-base">
+                            搭乘高鐵至 <span class="whitespace-nowrap font-medium text-[#d4a373]">台中高鐵站</span>，轉乘計程車或公車至 <span class="whitespace-nowrap font-medium text-[#d4a373]">406臺中市北屯區崇德路二段347號</span>。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 自行開車與停車 -->
+                <div class="bg-white rounded-xl shadow-sm border border-[#8da399]/20 overflow-hidden transition-all">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="text-[#8da399] font-medium tracking-widest flex items-center gap-3 text-base">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                            自行開車資訊
+                        </span>
+                        <svg class="acc-icon w-5 h-5 text-[#8da399] transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content bg-[var(--bg-base)]">
+                        <div class="px-6 py-5 text-gray-600 leading-relaxed border-t border-[#8da399]/10 tracking-wider text-sm md:text-base space-y-2">
+                            <p>1. 行駛 <span class="whitespace-nowrap font-medium text-[#d4a373]">國道一號</span> 下 <span class="whitespace-nowrap font-medium text-[#d4a373]">大雅交流道</span>，往北屯方向行駛。</p>
+                            <p>2. 導航設定至 <span class="whitespace-nowrap font-medium text-[#d4a373]">406臺中市北屯區崇德路二段347號</span> 即可順利抵達。</p>
+                            <p class="pt-2 text-xs md:text-sm text-gray-500">※ 場館周邊設有停車指引，歡迎多加利用。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 頁尾 Footer -->
-    <footer class="py-8 bg-[var(--bg-alt)] border-t border-gray-200/60 text-center text-xs text-gray-500 font-en tracking-widest">
+    <footer class="py-8 bg-white border-t border-gray-200/60 text-center text-xs text-gray-500 font-en tracking-widest">
         Lucas & Karen Wedding Invitation © 2026
     </footer>
 
