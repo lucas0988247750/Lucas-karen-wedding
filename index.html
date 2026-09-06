@@ -39,19 +39,12 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
 
-        /* 封面背景 Hero Background - 桌機與手機皆採用 contain 完整呈現不被裁切 */
+        /* 封面背景 Hero Background - 採用 cover 與 center 30% 確保 PC & 手機皆完美呈現 */
         .hero-bg {
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2)), url('https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg');
-            background-size: contain;
-            background-position: center center;
+            background-size: cover;
+            background-position: center 30%;
             background-repeat: no-repeat;
-            background-color: #1a1a1a;
-        }
-        @media (min-width: 768px) {
-            .hero-bg {
-                background-size: contain;
-                background-position: center center;
-            }
         }
 
         /* 計時器卡片 Countdown Cards */
@@ -157,7 +150,7 @@
     </nav>
 
     <!-- 封面 Hero Section -->
-    <section id="home" class="h-[100svh] hero-bg flex flex-col justify-center items-center text-white text-center relative px-4 bg-cover bg-center bg-no-repeat">
+    <section id="home" class="h-[100svh] hero-bg flex flex-col justify-center items-center text-white text-center relative px-4">
         <div class="animate-fade-up text-center max-w-xl">
             <p class="text-sm md:text-base tracking-[0.4em] mb-6 font-light drop-shadow-md font-en">October 26, 2026</p>
             <h1 class="text-5xl md:text-8xl font-en mb-8 tracking-wide drop-shadow-lg italic font-light">
@@ -222,19 +215,19 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <!-- 照片 1 (更新為指定網址，且以完整比例顯示不被裁切) -->
+                <!-- 照片 1 -->
                 <div class="gallery-item overflow-hidden rounded-2xl shadow-md bg-white p-2 border border-[#8da399]/20">
                     <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-50 flex items-center justify-center p-2">
                         <img src="https://i.postimg.cc/GppJyz4x/IMG-1180.jpg" alt="Gallery 1" class="gallery-img w-full h-full object-contain rounded-lg">
                     </div>
                 </div>
-                <!-- 照片 2 (完整比例顯示不被裁切) -->
+                <!-- 照片 2 -->
                 <div class="gallery-item overflow-hidden rounded-2xl shadow-md bg-white p-2 border border-[#8da399]/20">
                     <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-50 flex items-center justify-center p-2">
                         <img src="https://i.postimg.cc/d3cy49V2/IMG-0001.jpg" alt="Gallery 2" class="gallery-img w-full h-full object-contain rounded-lg">
                     </div>
                 </div>
-                <!-- 照片 3 (完整比例顯示不被裁切) -->
+                <!-- 照片 3 -->
                 <div class="gallery-item overflow-hidden rounded-2xl shadow-md bg-white p-2 border border-[#8da399]/20">
                     <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-50 flex items-center justify-center p-2">
                         <img src="https://i.postimg.cc/L6T13LKt/IMG-0035.jpg" alt="Gallery 3" class="gallery-img w-full h-full object-contain rounded-lg">
@@ -270,7 +263,7 @@
                     </p>
                     <p class="font-en text-xs text-gray-400 tracking-wider mt-1">No. 347, Sec. 2, Chongde Rd., Beitun Dist., Taichung City</p>
                     
-                    <!-- 提醒小字 (已移至地址下方) -->
+                    <!-- 提醒小字 -->
                     <div class="bg-[#fcfbf9] border border-[#d4a373]/25 rounded-xl p-3.5 mt-4 text-xs md:text-sm text-gray-600 tracking-wider leading-relaxed">
                         💡 提前抵達還有精心準備的迎賓小禮(限量)哦！<br>期待與您準時開席。
                     </div>
@@ -319,106 +312,106 @@
             </div>
 
             <!-- 隱藏式 Iframe Submit Target -->
-    <iframe name="hidden_iframe" id="hidden_iframe" class="hidden" onload="if(window.submitted){ showSuccessMessage(); }"></iframe>
+            <iframe name="hidden_iframe" id="hidden_iframe" class="hidden" onload="if(window.submitted){ showSuccessMessage(); }"></iframe>
 
-    <!-- 回函表單 -->
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfvidaqbCCQ14GsNxhqH3EKLemqdK-Ma1XbLypJ3dEDyCtAwA/formResponse" method="POST" target="hidden_iframe" id="wedding-form" onsubmit="window.submitted=true;" class="space-y-8 bg-[var(--bg-base)] p-8 md:p-12 rounded-2xl border border-[#8da399]/20 shadow-sm">
+            <!-- 回函表單 -->
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfvidaqbCCQ14GsNxhqH3EKLemqdK-Ma1XbLypJ3dEDyCtAwA/formResponse" method="POST" target="hidden_iframe" id="wedding-form" onsubmit="window.submitted=true;" class="space-y-8 bg-[var(--bg-base)] p-8 md:p-12 rounded-2xl border border-[#8da399]/20 shadow-sm">
                 
-        <!-- 姓名 NAME -->
-        <div>
-            <label class="form-label mb-2">
-                <span class="text-gray-700 tracking-wider font-medium">姓名</span>
-                <span class="form-label-en">NAME</span>
-            </label>
-            <input type="text" name="entry.580232985" placeholder="" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors" required>
-        </div>
+                <!-- 姓名 NAME -->
+                <div>
+                    <label class="form-label mb-2">
+                        <span class="text-gray-700 tracking-wider font-medium">姓名</span>
+                        <span class="form-label-en">NAME</span>
+                    </label>
+                    <input type="text" name="entry.580232985" placeholder="" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors" required>
+                </div>
 
-        <!-- 您是哪方の親友 SIDE -->
-        <div>
-            <label class="form-label mb-2">
-                <span class="text-gray-700 tracking-wider font-medium">您是哪方の親友</span>
-                <span class="form-label-en">SIDE</span>
-            </label>
-            <select name="entry.898905706" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer" required>
-                <option value="" disabled selected>請選擇關係</option>
-                <option value="男方親友">男方親友</option>
-                <option value="女方親友">女方親友</option>
-            </select>
-        </div>
+                <!-- 您是哪方の親友 SIDE -->
+                <div>
+                    <label class="form-label mb-2">
+                        <span class="text-gray-700 tracking-wider font-medium">您是哪方の親友</span>
+                        <span class="form-label-en">SIDE</span>
+                    </label>
+                    <select name="entry.898905706" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer" required>
+                        <option value="" disabled selected>請選擇關係</option>
+                        <option value="男方親友">男方親友</option>
+                        <option value="女方親友">女方親友</option>
+                    </select>
+                </div>
 
-        <!-- 是否出席 ATTENDANCE -->
-        <div>
-            <label class="form-label mb-2">
-                <span class="text-gray-700 tracking-wider font-medium">是否出席</span>
-                <span class="form-label-en">ATTENDANCE</span>
-            </label>
-            <select name="entry.593622963" id="attendance-select" onchange="handleAttendanceChange()" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer" required>
-                <option value="" disabled selected>請選擇是否出席</option>
-                <option value="當然會出席">當然會出席</option>
-                <option value="無法出席，獻上祝福">無法出席，獻上祝福</option>
-            </select>
-        </div>
+                <!-- 是否出席 ATTENDANCE -->
+                <div>
+                    <label class="form-label mb-2">
+                        <span class="text-gray-700 tracking-wider font-medium">是否出席</span>
+                        <span class="form-label-en">ATTENDANCE</span>
+                    </label>
+                    <select name="entry.593622963" id="attendance-select" onchange="handleAttendanceChange()" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer" required>
+                        <option value="" disabled selected>請選擇是否出席</option>
+                        <option value="當然會出席">當然會出席</option>
+                        <option value="無法出席，獻上祝福">無法出席，獻上祝福</option>
+                    </select>
+                </div>
 
-        <!-- 想給新人的話 (選擇是否出席後即跳出顯示) -->
-        <div id="blessing-field" class="hidden space-y-2 pt-4 border-t border-dashed border-[#8da399]/30">
-            <label class="form-label mb-2">
-                <span class="text-gray-700 tracking-wider font-medium">想給新人的話 / 祝福留言</span>
-                <span class="form-label-en">Something you wanna tell us</span>
-            </label>
-            <textarea name="entry.596556832" rows="3" placeholder="想對新人說的話..." class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors resize-none"></textarea>
-        </div>
+                <!-- 想給新人的話 -->
+                <div id="blessing-field" class="hidden space-y-2 pt-4 border-t border-dashed border-[#8da399]/30">
+                    <label class="form-label mb-2">
+                        <span class="text-gray-700 tracking-wider font-medium">想給新人的話 / 祝福留言</span>
+                        <span class="form-label-en">Something you wanna tell us</span>
+                    </label>
+                    <textarea name="entry.596556832" rows="3" placeholder="想對新人說的話..." class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors resize-none"></textarea>
+                </div>
 
-        <!-- 條件式觸發隱藏區域 (當然會出席時顯示之詳細資訊) -->
-        <div id="dynamic-fields" class="hidden space-y-8 pt-6 border-t border-dashed border-[#8da399]/30">
-            
-            <!-- 出席人數 GUESTS -->
-            <div>
-                <label class="form-label mb-2">
-                    <span class="text-gray-700 tracking-wider font-medium">出席人數</span>
-                    <span class="form-label-en">GUESTS</span>
-                </label>
-                <select name="entry.666047726" id="guests-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
-                    <option value="" disabled selected>請選擇出席人數</option>
-                    <option value="1人">1人</option>
-                    <option value="2人">2人</option>
-                </select>
-            </div>
+                <!-- 條件式觸發隱藏區域 -->
+                <div id="dynamic-fields" class="hidden space-y-8 pt-6 border-t border-dashed border-[#8da399]/30">
+                    
+                    <!-- 出席人數 GUESTS -->
+                    <div>
+                        <label class="form-label mb-2">
+                            <span class="text-gray-700 tracking-wider font-medium">出席人數</span>
+                            <span class="form-label-en">GUESTS</span>
+                        </label>
+                        <select name="entry.666047726" id="guests-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
+                            <option value="" disabled selected>請選擇出席人數</option>
+                            <option value="1人">1人</option>
+                            <option value="2人">2人</option>
+                        </select>
+                    </div>
 
-            <!-- 飲食需求 DIETARY -->
-            <div>
-                <label class="form-label mb-2">
-                    <span class="text-gray-700 tracking-wider font-medium">飲食需求</span>
-                    <span class="form-label-en">DIETARY</span>
-                </label>
-                <select name="entry.1774380288" id="dietary-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
-                    <option value="" disabled selected>請選擇飲食需求</option>
-                    <option value="葷食">葷食</option>
-                    <option value="素食">素食</option>
-                </select>
-            </div>
-            
-            <!-- 是否需要兒童椅 BABY CHAIR -->
-            <div>
-                <label class="form-label mb-2">
-                    <span class="text-gray-700 tracking-wider font-medium">是否需要兒童椅</span>
-                    <span class="form-label-en">BABY CHAIR</span>
-                </label>
-                <select name="entry.1981029119" id="baby-chair-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
-                    <option value="" disabled selected>請選擇兒童椅需求</option>
-                    <option value="需要">需要</option>
-                    <option value="不需要">不需要</option>
-                </select>
-            </div>
+                    <!-- 飲食需求 DIETARY -->
+                    <div>
+                        <label class="form-label mb-2">
+                            <span class="text-gray-700 tracking-wider font-medium">飲食需求</span>
+                            <span class="form-label-en">DIETARY</span>
+                        </label>
+                        <select name="entry.1774380288" id="dietary-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
+                            <option value="" disabled selected>請選擇飲食需求</option>
+                            <option value="葷食">葷食</option>
+                            <option value="素食">素食</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 是否需要兒童椅 BABY CHAIR -->
+                    <div>
+                        <label class="form-label mb-2">
+                            <span class="text-gray-700 tracking-wider font-medium">是否需要兒童椅</span>
+                            <span class="form-label-en">BABY CHAIR</span>
+                        </label>
+                        <select name="entry.1981029119" id="baby-chair-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
+                            <option value="" disabled selected>請選擇兒童椅需求</option>
+                            <option value="需要">需要</option>
+                            <option value="不需要">不需要</option>
+                        </select>
+                    </div>
 
-        </div>
+                </div>
 
-        <!-- 送出按鈕 -->
-        <button type="submit" class="w-full mt-4 bg-[#8da399] hover:bg-[#d4a373] text-white py-4 rounded-xl tracking-[0.2em] transition-all duration-300 font-medium shadow-md hover:shadow-lg">
-            確認送出 <span class="font-en ml-1 text-sm tracking-wider">SUBMIT</span>
-        </button>
-    </form>
+                <!-- 送出按鈕 -->
+                <button type="submit" class="w-full mt-4 bg-[#8da399] hover:bg-[#d4a373] text-white py-4 rounded-xl tracking-[0.2em] transition-all duration-300 font-medium shadow-md hover:shadow-lg">
+                    確認送出 <span class="font-en ml-1 text-sm tracking-wider">SUBMIT</span>
+                </button>
+            </form>
 
-    <!-- 提交成功提示 -->
+            <!-- 提交成功提示 -->
             <div id="success-message" class="hidden text-center p-12 bg-[var(--bg-base)] rounded-2xl border border-[#d4a373]/40 shadow-lg animate-fade-up">
                 <div class="w-16 h-16 bg-[#d4a373]/15 rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg class="w-8 h-8 text-[#d4a373]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -443,7 +436,7 @@
                 </p>
             </div>
 
-            <!-- 摺疊面板組 (文字在前) -->
+            <!-- 摺疊面板組 -->
             <div class="space-y-4 max-w-2xl mx-auto mb-12">
                 <div class="bg-white rounded-xl shadow-sm border border-[#8da399]/20 overflow-hidden transition-all">
                     <button onclick="toggleAccordion(this)" class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
@@ -480,7 +473,7 @@
                 </div>
             </div>
 
-            <!-- 交通資訊圖片：放置於文字下方 -->
+            <!-- 交通資訊圖片 -->
             <div class="space-y-6 max-w-2xl mx-auto">
                 <div class="rounded-2xl overflow-hidden shadow-lg bg-white p-2 border border-[#8da399]/25">
                     <img src="https://i.postimg.cc/1RWh9SCF/jiao-tong-tu-shang-mian.png" alt="交通資訊 上面" class="w-full h-auto rounded-xl shadow-sm object-cover">
