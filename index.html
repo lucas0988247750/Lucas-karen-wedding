@@ -20,7 +20,7 @@
         }
         
         body {
-            font-family: "Noto Serif TC", serif;
+            font-family: "Microsoft JhengHei", "Noto Serif TC", sans-serif;
             color: #4a4a4a;
             background-color: var(--bg-base);
             -webkit-font-smoothing: antialiased;
@@ -39,7 +39,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
 
-        /* 封面背景 Hero Background - 改為背景完整呈現且不變形 */
+        /* 封面背景 Hero Background - 桌機與手機皆採用 contain 完整呈現不被裁切 */
         .hero-bg {
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2)), url('https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg');
             background-size: contain;
@@ -49,8 +49,8 @@
         }
         @media (min-width: 768px) {
             .hero-bg {
-                background-size: cover;
-                background-position: center 30%;
+                background-size: contain;
+                background-position: center center;
             }
         }
 
