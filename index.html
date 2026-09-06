@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -20,7 +20,7 @@
         }
         
         body {
-            font-family: 'Noto Serif TC', serif;
+            font-family: "Noto Serif TC", serif;
             color: #4a4a4a;
             background-color: var(--bg-base);
             -webkit-font-smoothing: antialiased;
@@ -39,12 +39,19 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
 
-        /* 封面背景 Hero Background */
+        /* 封面背景 Hero Background - 改為背景完整呈現且不變形 */
         .hero-bg {
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2)), url('https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg');
-            background-size: cover;
-            background-position: center 30%;
+            background-size: contain;
+            background-position: center center;
             background-repeat: no-repeat;
+            background-color: #1a1a1a;
+        }
+        @media (min-width: 768px) {
+            .hero-bg {
+                background-size: cover;
+                background-position: center 30%;
+            }
         }
 
         /* 計時器卡片 Countdown Cards */
@@ -150,14 +157,14 @@
     </nav>
 
     <!-- 封面 Hero Section -->
-    <section id="home" class="h-[100svh] hero-bg flex flex-col justify-center items-center text-white text-center relative px-4 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25)), url('https://i.postimg.cc/GppJyz4x/IMG-1180.jpg');">
+    <section id="home" class="h-[100svh] hero-bg flex flex-col justify-center items-center text-white text-center relative px-4 bg-cover bg-center bg-no-repeat">
         <div class="animate-fade-up text-center max-w-xl">
             <p class="text-sm md:text-base tracking-[0.4em] mb-6 font-light drop-shadow-md font-en">October 26, 2026</p>
             <h1 class="text-5xl md:text-8xl font-en mb-8 tracking-wide drop-shadow-lg italic font-light">
                 Lucas <span class="text-3xl md:text-6xl mx-2 md:mx-4 not-italic text-[#d4a373]">&</span> Karen
             </h1>
             <div class="inline-block border-y border-white/40 py-3 px-6 my-2">
-                <p class="text-base md:text-xl tracking-[0.25em] font-light drop-shadow-md whitespace-nowrap">我們結婚啦！</p>
+                <p class="text-base md:text-xl tracking-[0.25em] font-light drop-shadow-md whitespace-nowrap">我們要結婚了！</p>
             </div>
             <p class="font-en text-xs md:text-sm tracking-[0.3em] uppercase text-white/80 mt-4 font-light">We're Getting Married</p>
         </div>
@@ -210,27 +217,27 @@
             <div class="text-center mb-16">
                 <h3 class="font-en text-[#d4a373] text-3xl md:text-4xl italic mb-1">Our Gallery</h3>
                 <p class="font-en text-xs tracking-[0.25em] text-[#8da399] uppercase mb-2">Sweet Moments</p>
-                <p class="text-base tracking-widest text-gray-700 font-medium">婚紗寫真</p>
+                <p class="text-base tracking-widest text-gray-700 font-medium">婚紗藝廊</p>
                 <div class="w-12 h-0.5 bg-[#d4a373] mx-auto mt-4"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <!-- 照片 1 -->
+                <!-- 照片 1 (更新為指定網址，且以完整比例顯示不被裁切) -->
                 <div class="gallery-item overflow-hidden rounded-2xl shadow-md bg-white p-2 border border-[#8da399]/20">
                     <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-50 flex items-center justify-center p-2">
-                        <img src="https://i.postimg.cc/tJbcpZN3/IMG-1152.jpg" alt="Gallery 1" class="gallery-img max-w-full max-h-full object-contain">
+                        <img src="https://i.postimg.cc/GppJyz4x/IMG-1180.jpg" alt="Gallery 1" class="gallery-img w-full h-full object-contain rounded-lg">
                     </div>
                 </div>
-                <!-- 照片 2 -->
+                <!-- 照片 2 (完整比例顯示不被裁切) -->
                 <div class="gallery-item overflow-hidden rounded-2xl shadow-md bg-white p-2 border border-[#8da399]/20">
                     <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-50 flex items-center justify-center p-2">
-                        <img src="https://i.postimg.cc/L6T13LKt/IMG-0035.jpg" alt="Gallery 2" class="gallery-img max-w-full max-h-full object-contain">
+                        <img src="https://i.postimg.cc/d3cy49V2/IMG-0001.jpg" alt="Gallery 2" class="gallery-img w-full h-full object-contain rounded-lg">
                     </div>
                 </div>
-                <!-- 照片 3 -->
+                <!-- 照片 3 (完整比例顯示不被裁切) -->
                 <div class="gallery-item overflow-hidden rounded-2xl shadow-md bg-white p-2 border border-[#8da399]/20">
                     <div class="overflow-hidden rounded-xl aspect-[4/5] bg-gray-50 flex items-center justify-center p-2">
-                        <img src="https://i.postimg.cc/d3cy49V2/IMG-0001.jpg" alt="Gallery 3" class="gallery-img max-w-full max-h-full object-contain">
+                        <img src="https://i.postimg.cc/L6T13LKt/IMG-0035.jpg" alt="Gallery 3" class="gallery-img w-full h-full object-contain rounded-lg">
                     </div>
                 </div>
             </div>
@@ -271,23 +278,23 @@
 
                 <!-- Dress Code -->
                 <div class="pt-8 border-t border-[#8da399]/20">
-                    <p class="font-en text-sm text-[#8da399] tracking-[0.2em] uppercase mb-6 font-semibold">Dress Code</p>
-                    <div class="flex flex-wrap justify-center items-center gap-5 md:gap-6 mb-6">
+                    <p class="font-en text-sm text-[#8da399] tracking-[0.2em] uppercase mb-6 font-semibold">Dress code</p>
+                    <div class="grid grid-cols-2 gap-y-4 gap-x-6 max-w-sm mx-auto mb-6 justify-items-start">
                         <div class="flex items-center gap-2.5">
-                            <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200" style="background-color: #8da399;"></span>
-                            <span class="text-gray-700 tracking-wider text-sm md:text-base">霧藍 <span class="font-en text-sm ml-0.5 text-gray-500">Dusty blue</span></span>
+                            <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200 shrink-0" style="background-color: #8da399;"></span>
+                            <span class="text-gray-700 tracking-wider text-sm md:text-base whitespace-nowrap">霧藍 <span class="font-en text-sm text-gray-500">Dusty blue</span></span>
                         </div>
                         <div class="flex items-center gap-2.5">
-                            <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200" style="background-color: #e3d5ca;"></span>
-                            <span class="text-gray-700 tracking-wider text-sm md:text-base">燕麥奶茶 <span class="font-en text-sm ml-0.5 text-gray-500">Oatmeal</span></span>
+                            <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200 shrink-0" style="background-color: #d0c1b4;"></span>
+                            <span class="text-gray-700 tracking-wider text-sm md:text-base whitespace-nowrap">淺拿鐵 <span class="font-en text-sm text-gray-500">Light Latte</span></span>
                         </div>
                         <div class="flex items-center gap-2.5">
-                            <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200" style="background-color: #8b5a2b;"></span>
-                            <span class="text-gray-700 tracking-wider text-sm md:text-base">咖啡色 <span class="font-en text-sm ml-0.5 text-gray-500">Brown</span></span>
+                            <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200 shrink-0" style="background-color: #eae3d2;"></span>
+                            <span class="text-gray-700 tracking-wider text-sm md:text-base whitespace-nowrap">燕麥奶白 <span class="font-en text-sm text-gray-500">Oatmeal Cream</span></span>
                         </div>
                         <div class="flex items-center gap-2.5">
-                            <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200" style="background-color: #2b2b2b;"></span>
-                            <span class="text-gray-700 tracking-wider text-sm md:text-base">黑色 <span class="font-en text-sm ml-0.5 text-gray-500">Black</span></span>
+                            <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200 shrink-0" style="background-color: #796A5E;"></span>
+                            <span class="text-gray-700 tracking-wider text-sm md:text-base whitespace-nowrap">可可棕色 <span class="font-en text-sm text-gray-500">Cocoa Brown</span></span>
                         </div>
                     </div>
                     <!-- 服裝顏色建議字眼 -->
