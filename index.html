@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Microsoft+JhengHei:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -20,7 +20,7 @@
         }
         
         body {
-            font-family: "Microsoft JhengHei", "Noto Serif TC", sans-serif;
+            font-family: "Microsoft JhengHei", sans-serif;
             color: #4a4a4a;
             background-color: var(--bg-base);
             -webkit-font-smoothing: antialiased;
@@ -39,9 +39,9 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
 
-        /* 封面背景 Hero Background - 修正圖片裁切，使用 contain 完整呈現 */
+        /* 封面背景 Hero Background - 完整呈現不裁切 */
         .hero-bg {
-            background-color: #f5f2eb;
+            background-color: #e8e4dc;
             position: relative;
             overflow: hidden;
         }
@@ -149,27 +149,28 @@
     </nav>
 
     <!-- 封面 Hero Section -->
-    <section id="home" class="h-[100svh] hero-bg flex flex-col justify-end items-center text-white text-center relative px-4 pb-20 md:pb-16">
-        <!-- 背景圖片容器：使用 contain 讓整張照片完整呈現不被卡掉，並加上淺色背景融合成質感滿版 -->
-        <div class="absolute inset-0 z-0 flex items-center justify-center bg-[#f5f2eb] pt-20 pb-28 md:py-16">
-            <div class="absolute inset-0 bg-black/20 z-10"></div>
+    <section id="home" class="h-[100svh] hero-bg flex flex-col justify-center items-center text-white text-center relative px-4">
+        <!-- 背景圖片容器：使用 contain 讓整張照片完整呈現不被卡掉 -->
+        <div class="absolute inset-0 z-0 flex items-center justify-center bg-[#e8e4dc]">
+            <div class="absolute inset-0 bg-black/15 z-10"></div>
             <img src="https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg" alt="Lucas & Karen 封面照" class="w-full h-full object-contain">
         </div>
 
-        <div class="animate-fade-up text-center max-w-xl z-20 relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-            <p class="text-sm md:text-base tracking-[0.4em] mb-4 md:mb-6 font-light drop-shadow-md font-en text-white">October 26, 2026</p>
-            <h1 class="text-4xl sm:text-5xl md:text-8xl font-en mb-6 md:mb-8 tracking-wide drop-shadow-lg italic font-light text-white">
-                Lucas <span class="text-2xl sm:text-3xl md:text-6xl mx-2 md:mx-4 not-italic text-[#e5b282]">&</span> Karen
+        <!-- 文字調大、淡化，將「我們要結婚了！」放大兩階段，並將上下英文字體大小比照一致 -->
+        <div class="animate-fade-up text-center max-w-xl z-25 relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] mt-16 md:mt-20">
+            <p class="text-xl md:text-3xl tracking-[0.4em] mb-3 font-light text-white/75 font-en">October 26, 2026</p>
+            <h1 class="text-5xl sm:text-6xl md:text-8xl font-en mb-4 md:mb-6 tracking-wide drop-shadow-sm italic font-light text-white/90">
+                Lucas <span class="text-3xl sm:text-4xl md:text-6xl mx-2 md:mx-4 not-italic text-[#e5b282]/85">&</span> Karen
             </h1>
-            <div class="inline-block border-y border-white/60 py-2.5 px-6 my-2 bg-black/25 backdrop-blur-xs rounded-xs">
-                <p class="text-base md:text-xl tracking-[0.25em] font-light drop-shadow-md whitespace-nowrap text-white">我們要結婚了！</p>
+            <div class="my-3">
+                <p class="text-2xl sm:text-3xl md:text-4xl tracking-[0.35em] font-medium text-white/95">我們要結婚了！</p>
             </div>
-            <p class="font-en text-xs md:text-sm tracking-[0.3em] uppercase text-white/90 mt-4 font-light">We're Getting Married</p>
+            <p class="font-en text-xl sm:text-2xl md:text-3xl tracking-[0.3em] uppercase text-white/65 mt-3 font-light">We're Getting Married</p>
         </div>
         
-        <a href="#gallery" class="absolute bottom-6 md:bottom-8 z-20 animate-bounce flex flex-col items-center gap-2 opacity-90 hover:opacity-100 transition-opacity drop-shadow-md">
-            <span class="font-en text-xs tracking-[0.2em] uppercase text-white">Scroll Down</span>
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <a href="#gallery" class="absolute bottom-6 md:bottom-8 z-20 animate-bounce flex flex-col items-center gap-1.5 opacity-70 hover:opacity-100 transition-opacity drop-shadow-sm">
+            <span class="font-en text-[10px] tracking-[0.2em] uppercase text-white/75">Scroll Down</span>
+            <svg class="w-4 h-4 text-white/75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
         </a>
@@ -274,7 +275,7 @@
                     </div>
                 </div>
 
-                <!-- Dress Code -->
+                <!-- Dress Code (霧藍、淺拿鐵、燕麥奶白、可可棕色 - 按照正確順序) -->
                 <div class="pt-8 border-t border-[#8da399]/20">
                     <p class="font-en text-sm text-[#8da399] tracking-[0.2em] uppercase mb-6 font-semibold">Dress code</p>
                     <div class="grid grid-cols-2 gap-y-4 gap-x-6 max-w-sm mx-auto mb-6 justify-items-start">
