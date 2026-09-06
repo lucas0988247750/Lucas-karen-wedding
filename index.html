@@ -39,9 +39,9 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
 
-        /* 封面背景 Hero Background - 改為 contain 完整呈現或使用 flex 圖片容器以避免被裁切 */
+        /* 封面背景 Hero Background - 修正圖片裁切，使用 contain 完整呈現 */
         .hero-bg {
-            background-color: #2b2b2b;
+            background-color: #f5f2eb;
             position: relative;
             overflow: hidden;
         }
@@ -150,25 +150,25 @@
 
     <!-- 封面 Hero Section -->
     <section id="home" class="h-[100svh] hero-bg flex flex-col justify-end items-center text-white text-center relative px-4 pb-20 md:pb-16">
-        <!-- 背景圖片容器：使用 contain 讓整張照片完整呈現不被卡掉 -->
-        <div class="absolute inset-0 z-0 flex items-center justify-center bg-[#1a1a1a]">
-            <div class="absolute inset-0 bg-black/35 z-10"></div>
-            <img src="https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg" alt="Lucas & Karen 封面照" class="w-full h-full object-contain md:object-cover">
+        <!-- 背景圖片容器：使用 contain 讓整張照片完整呈現不被卡掉，並加上淺色背景融合成質感滿版 -->
+        <div class="absolute inset-0 z-0 flex items-center justify-center bg-[#f5f2eb] pt-20 pb-28 md:py-16">
+            <div class="absolute inset-0 bg-black/20 z-10"></div>
+            <img src="https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg" alt="Lucas & Karen 封面照" class="w-full h-full object-contain">
         </div>
 
-        <div class="animate-fade-up text-center max-w-xl z-20 relative">
-            <p class="text-sm md:text-base tracking-[0.4em] mb-4 md:mb-6 font-light drop-shadow-md font-en">October 26, 2026</p>
-            <h1 class="text-4xl sm:text-5xl md:text-8xl font-en mb-6 md:mb-8 tracking-wide drop-shadow-lg italic font-light">
-                Lucas <span class="text-2xl sm:text-3xl md:text-6xl mx-2 md:mx-4 not-italic text-[#d4a373]">&</span> Karen
+        <div class="animate-fade-up text-center max-w-xl z-20 relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            <p class="text-sm md:text-base tracking-[0.4em] mb-4 md:mb-6 font-light drop-shadow-md font-en text-white">October 26, 2026</p>
+            <h1 class="text-4xl sm:text-5xl md:text-8xl font-en mb-6 md:mb-8 tracking-wide drop-shadow-lg italic font-light text-white">
+                Lucas <span class="text-2xl sm:text-3xl md:text-6xl mx-2 md:mx-4 not-italic text-[#e5b282]">&</span> Karen
             </h1>
-            <div class="inline-block border-y border-white/40 py-2.5 px-6 my-2 bg-black/10 backdrop-blur-xs rounded-xs">
-                <p class="text-base md:text-xl tracking-[0.25em] font-light drop-shadow-md whitespace-nowrap">我們要結婚了！</p>
+            <div class="inline-block border-y border-white/60 py-2.5 px-6 my-2 bg-black/25 backdrop-blur-xs rounded-xs">
+                <p class="text-base md:text-xl tracking-[0.25em] font-light drop-shadow-md whitespace-nowrap text-white">我們要結婚了！</p>
             </div>
-            <p class="font-en text-xs md:text-sm tracking-[0.3em] uppercase text-white/80 mt-4 font-light">We're Getting Married</p>
+            <p class="font-en text-xs md:text-sm tracking-[0.3em] uppercase text-white/90 mt-4 font-light">We're Getting Married</p>
         </div>
         
-        <a href="#gallery" class="absolute bottom-6 md:bottom-8 z-20 animate-bounce flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-            <span class="font-en text-xs tracking-[0.2em] uppercase">Scroll Down</span>
+        <a href="#gallery" class="absolute bottom-6 md:bottom-8 z-20 animate-bounce flex flex-col items-center gap-2 opacity-90 hover:opacity-100 transition-opacity drop-shadow-md">
+            <span class="font-en text-xs tracking-[0.2em] uppercase text-white">Scroll Down</span>
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
