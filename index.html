@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="zh-TW" class="scroll-smooth">
 <head>
@@ -7,10 +6,10 @@ HTML
     <title>Lucas & Karen | 婚禮邀請函</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
+    <!-- Google Fonts: 導入 Cormorant Garamond 與 Noto Serif TC -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -21,10 +20,24 @@ HTML
         }
         
         body {
-            font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+            font-family: 'Noto Serif TC', 'Cormorant Garamond', serif;
             color: #4a4a4a;
             background-color: var(--bg-base);
             -webkit-font-smoothing: antialiased;
+            letter-spacing: 0.05em;
+        }
+        
+        /* 質感柔和英文字體 (高雅微斜體) */
+        .font-en-script {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* 柔和中文字體 (細緻思源宋體) */
+        .font-zh-script {
+            font-family: 'Noto Serif TC', serif;
+            font-weight: 400;
         }
         
         .font-en {
@@ -81,7 +94,7 @@ HTML
             gap: 0.5rem;
         }
         .form-label-en {
-            font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 0.85rem;
             color: var(--color-green);
             text-transform: uppercase;
@@ -120,10 +133,10 @@ HTML
     <!-- 導航列 Header -->
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="font-en text-2xl tracking-widest text-[#8da399] font-medium italic">L & K</a>
+            <a href="#home" class="font-en-script text-2xl text-[#8da399] tracking-wider">Lucas & Karen</a>
             
             <!-- 選單項目 (桌機版) -->
-            <div class="space-x-10 hidden md:block text-[#8da399] font-en text-lg tracking-widest font-medium">
+            <div class="space-x-10 hidden md:block text-[#8da399] font-en text-base tracking-widest font-medium">
                 <a href="#home" class="hover:text-[#d4a373] transition-colors py-1 italic">About</a>
                 <a href="#gallery" class="hover:text-[#d4a373] transition-colors py-1 italic">Gallery</a>
                 <a href="#details" class="hover:text-[#d4a373] transition-colors py-1 italic">Details</a>
@@ -140,7 +153,7 @@ HTML
         </div>
 
         <!-- 手機版下拉選單 -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-gray-100 px-6 py-4 space-y-4 text-center font-en text-lg italic tracking-widest text-[#8da399]">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-gray-100 px-6 py-4 space-y-4 text-center font-en text-base italic tracking-widest text-[#8da399]">
             <a href="#home" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">About</a>
             <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">Gallery</a>
             <a href="#details" onclick="toggleMobileMenu()" class="block py-2 hover:text-[#d4a373]">Details</a>
@@ -157,16 +170,16 @@ HTML
             <img src="https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg" alt="Lucas & Karen 封面照" class="w-full h-full object-contain">
         </div>
 
-        <!-- 文字調大、淡化，將「我們要結婚了！」放大兩階段，並將上下英文字體大小比照一致 -->
+        <!-- 封面主標題 -->
         <div class="animate-fade-up text-center max-w-xl z-25 relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] mt-16 md:mt-20">
-            <p class="text-xl md:text-3xl tracking-[0.4em] mb-3 font-light text-white/75 font-en">October 26, 2026</p>
-            <h1 class="text-5xl sm:text-6xl md:text-8xl font-en mb-4 md:mb-6 tracking-wide drop-shadow-sm italic font-light text-white/90">
-                Lucas <span class="text-3xl sm:text-4xl md:text-6xl mx-2 md:mx-4 not-italic text-[#e5b282]/85">&</span> Karen
+            <p class="text-lg md:text-xl tracking-[0.25em] mb-3 text-white/85 font-en font-normal">October 26, 2026</p>
+            <h1 class="text-5xl sm:text-6xl md:text-8xl font-en-script mb-3 md:mb-4 tracking-wide drop-shadow-sm text-white/95">
+                Lucas <span class="text-3xl sm:text-4xl md:text-6xl mx-2 text-[#e5b282]/90">&</span> Karen
             </h1>
             <div class="my-3">
-                <p class="text-2xl sm:text-3xl md:text-4xl tracking-[0.35em] font-medium text-white/95">我們要結婚了！</p>
+                <p class="text-2xl sm:text-3xl md:text-4xl tracking-[0.2em] text-white/95 font-zh-script font-normal">我們要結婚了</p>
             </div>
-            <p class="font-en text-xl sm:text-2xl md:text-3xl tracking-[0.3em] uppercase text-white/65 mt-3 font-light">We're Getting Married</p>
+            <p class="font-en text-base sm:text-lg md:text-xl tracking-[0.3em] uppercase text-white/70 mt-3 font-normal">We're Getting Married</p>
         </div>
         
         <a href="#gallery" class="absolute bottom-6 md:bottom-8 z-20 animate-bounce flex flex-col items-center gap-1.5 opacity-70 hover:opacity-100 transition-opacity drop-shadow-sm">
@@ -181,29 +194,29 @@ HTML
     <section class="py-20 bg-white relative">
         <div class="max-w-4xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h3 class="font-en text-[#d4a373] text-3xl md:text-4xl italic mb-1 tracking-wider">Countdown</h3>
+                <h3 class="font-en-script text-[#d4a373] text-3xl md:text-4xl mb-1">Countdown</h3>
                 <p class="font-en text-xs tracking-[0.25em] text-[#8da399] uppercase mb-2">Time Until We Do</p>
-                <p class="text-sm tracking-[0.25em] text-gray-500">倒數計時 迎接我們的美好時刻</p>
+                <p class="text-sm tracking-[0.2em] text-gray-500">倒數計時 迎接我們的美好時刻</p>
             </div>
             
             <div id="countdown-container" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
                 <div class="cd-card flex items-center justify-center p-5 md:p-6">
-                    <span id="cd-days" class="font-en text-4xl md:text-5xl text-[#d4a373] w-14 text-right pr-3 md:pr-4 font-light">00</span>
+                    <span id="cd-days" class="font-en text-4xl md:text-5xl text-[#d4a373] w-14 text-right pr-3 md:pr-4 font-normal">00</span>
                     <div class="cd-divider"></div>
                     <span class="pl-3 md:pl-4 text-xs md:text-sm text-[#8da399] tracking-widest font-en uppercase font-semibold">Days</span>
                 </div>
                 <div class="cd-card flex items-center justify-center p-5 md:p-6">
-                    <span id="cd-hours" class="font-en text-4xl md:text-5xl text-[#d4a373] w-14 text-right pr-3 md:pr-4 font-light">00</span>
+                    <span id="cd-hours" class="font-en text-4xl md:text-5xl text-[#d4a373] w-14 text-right pr-3 md:pr-4 font-normal">00</span>
                     <div class="cd-divider"></div>
                     <span class="pl-3 md:pl-4 text-xs md:text-sm text-[#8da399] tracking-widest font-en uppercase font-semibold">Hours</span>
                 </div>
                 <div class="cd-card flex items-center justify-center p-5 md:p-6">
-                    <span id="cd-mins" class="font-en text-4xl md:text-5xl text-[#d4a373] w-14 text-right pr-3 md:pr-4 font-light">00</span>
+                    <span id="cd-mins" class="font-en text-4xl md:text-5xl text-[#d4a373] w-14 text-right pr-3 md:pr-4 font-normal">00</span>
                     <div class="cd-divider"></div>
                     <span class="pl-3 md:pl-4 text-xs md:text-sm text-[#8da399] tracking-widest font-en uppercase font-semibold">Mins</span>
                 </div>
                 <div class="cd-card flex items-center justify-center p-5 md:p-6">
-                    <span id="cd-secs" class="font-en text-4xl md:text-5xl text-[#d4a373] w-14 text-right pr-3 md:pr-4 font-light">00</span>
+                    <span id="cd-secs" class="font-en text-4xl md:text-5xl text-[#d4a373] w-14 text-right pr-3 md:pr-4 font-normal">00</span>
                     <div class="cd-divider"></div>
                     <span class="pl-3 md:pl-4 text-xs md:text-sm text-[#8da399] tracking-widest font-en uppercase font-semibold">Secs</span>
                 </div>
@@ -215,7 +228,7 @@ HTML
     <section id="gallery" class="py-24 px-4 bg-[var(--bg-alt)]">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
-                <h3 class="font-en text-[#d4a373] text-3xl md:text-4xl italic mb-1">Our Gallery</h3>
+                <h3 class="font-en-script text-[#d4a373] text-3xl md:text-4xl mb-1">Our Gallery</h3>
                 <p class="font-en text-xs tracking-[0.25em] text-[#8da399] uppercase mb-2">Sweet Moments</p>
                 <p class="text-base tracking-widest text-gray-700 font-medium">婚紗藝廊</p>
                 <div class="w-12 h-0.5 bg-[#d4a373] mx-auto mt-4"></div>
@@ -248,57 +261,62 @@ HTML
     <section id="details" class="py-24 px-4 bg-[var(--bg-base)]">
         <div class="max-w-xl mx-auto bg-white p-8 md:p-14 rounded-2xl shadow-[0_10px_40px_rgba(212,163,115,0.08)] border border-[#d4a373]/20 relative">
             <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[var(--bg-base)] px-6 py-1.5 rounded-full border border-[#d4a373]/30">
-                <span class="font-en text-[#d4a373] text-xl italic tracking-wider">Wedding Details</span>
+                <span class="font-en-script text-[#d4a373] text-xl tracking-wider">Wedding Details</span>
             </div>
             
             <div class="text-center space-y-10 mt-4">
                 <!-- 日期 -->
                 <div>
                     <p class="font-en text-sm text-[#8da399] tracking-[0.2em] uppercase mb-2 font-semibold">Date</p>
-                    <p class="text-xl tracking-widest text-gray-700 font-medium">2026年10月26日 (星期一)</p>
+                    <p class="text-xl tracking-widest text-gray-700 font-medium font-zh-script">2026年10月26日 (星期一)</p>
                     <p class="font-en text-xs text-gray-400 tracking-wider mt-1">Monday, October 26, 2026</p>
+                    <p class="text-xs text-[#d4a373] tracking-widest mt-1.5 font-zh-script font-medium">✨ 當天是連續假期，歡迎提前安排行程與交通</p>
                 </div>
                 
                 <!-- 時間與地點 -->
                 <div>
                     <p class="font-en text-sm text-[#8da399] tracking-[0.2em] uppercase mb-2 font-semibold">Time & Location</p>
-                    <p class="text-lg tracking-widest text-gray-800 font-medium mb-1">11:30 入場 ｜ 11:50 準時開始</p>
+                    <div class="text-lg md:text-xl tracking-widest text-gray-800 font-medium font-zh-script mb-1 flex items-center justify-center flex-wrap gap-x-2">
+                      <span>11:30</span><span>入場</span>
+                      <span class="text-[#d4a373] font-light">｜</span>
+                      <span>11:50</span><span>準時開始</span>
+                    </div>
                     <p class="font-en text-xs text-[#d4a373] tracking-wider mb-3">Doors Open 11:30 AM · Ceremony Starts 11:50 AM</p>
                     
-                    <p class="text-xl tracking-widest text-gray-800 font-medium mt-3">
+                    <p class="text-xl tracking-widest text-gray-800 font-medium mt-3 font-zh-script">
                         <span class="whitespace-nowrap">臺中市北屯區崇德路二段347號</span>
                     </p>
                     <p class="font-en text-xs text-gray-400 tracking-wider mt-1">No. 347, Sec. 2, Chongde Rd., Beitun Dist., Taichung City</p>
                     
                     <!-- 提醒小字 -->
-                    <div class="bg-[#fcfbf9] border border-[#d4a373]/25 rounded-xl p-3.5 mt-4 text-xs md:text-sm text-gray-600 tracking-wider leading-relaxed">
+                    <div class="bg-[#fcfbf9] border border-[#d4a373]/25 rounded-xl p-3.5 mt-4 text-xs md:text-sm text-gray-600 tracking-wider leading-relaxed font-zh-script">
                         💡 提前抵達還有精心準備的迎賓小禮(限量)哦！<br>期待與您準時開席。
                     </div>
                 </div>
 
-                <!-- Dress Code (霧藍、淺拿鐵、燕麥奶白、可可棕色) -->
+                <!-- Dress Code -->
                 <div class="pt-8 border-t border-[#8da399]/20">
                     <p class="font-en text-sm text-[#8da399] tracking-[0.2em] uppercase mb-6 font-semibold">Dress code</p>
                     <div class="grid grid-cols-2 gap-y-4 gap-x-6 max-w-sm mx-auto mb-6 justify-items-start">
                         <div class="flex items-center gap-2.5">
                             <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200 shrink-0" style="background-color: #8da399;"></span>
-                            <span class="text-gray-700 tracking-wider text-xs md:text-sm whitespace-nowrap">霧藍 <span class="font-en text-xs text-gray-500">Dusty blue</span></span>
+                            <span class="text-gray-700 tracking-wider text-xs md:text-sm whitespace-nowrap font-zh-script">霧藍 <span class="font-en text-xs text-gray-500">Dusty blue</span></span>
                         </div>
                         <div class="flex items-center gap-2.5">
                             <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200 shrink-0" style="background-color: #d0c1b4;"></span>
-                            <span class="text-gray-700 tracking-wider text-xs md:text-sm whitespace-nowrap">淺拿鐵 <span class="font-en text-xs text-gray-500">Light Latte</span></span>
+                            <span class="text-gray-700 tracking-wider text-xs md:text-sm whitespace-nowrap font-zh-script">淺拿鐵 <span class="font-en text-xs text-gray-500">Light Latte</span></span>
                         </div>
                         <div class="flex items-center gap-2.5">
                             <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200 shrink-0" style="background-color: #eae3d2;"></span>
-                            <span class="text-gray-700 tracking-wider text-xs md:text-sm whitespace-nowrap">燕麥奶白 <span class="font-en text-xs text-gray-500">Oatmeal Cream</span></span>
+                            <span class="text-gray-700 tracking-wider text-xs md:text-sm whitespace-nowrap font-zh-script">燕麥奶白 <span class="font-en text-xs text-gray-500">Oatmeal Cream</span></span>
                         </div>
                         <div class="flex items-center gap-2.5">
                             <span class="w-4 h-4 rounded-full shadow-inner border border-gray-200 shrink-0" style="background-color: #796A5E;"></span>
-                            <span class="text-gray-700 tracking-wider text-xs md:text-sm whitespace-nowrap">可可棕色 <span class="font-en text-xs text-gray-500">Cocoa Brown</span></span>
+                            <span class="text-gray-700 tracking-wider text-xs md:text-sm whitespace-nowrap font-zh-script">可可棕色 <span class="font-en text-xs text-gray-500">Cocoa Brown</span></span>
                         </div>
                     </div>
                     <!-- 服裝顏色建議字眼 -->
-                    <p class="text-xs md:text-sm text-gray-500 tracking-widest leading-relaxed bg-[#fcfbf9] py-3 px-4 rounded-lg border border-[#8da399]/15">
+                    <p class="text-xs md:text-sm text-gray-500 tracking-widest leading-relaxed bg-[#fcfbf9] py-3 px-4 rounded-lg border border-[#8da399]/15 font-zh-script">
                         建議顏色：邀請您穿著上述主題色調出席，與我們一同打造溫馨浪漫的婚禮氛圍。
                     </p>
                 </div>
@@ -310,10 +328,10 @@ HTML
     <section id="rsvp" class="py-24 px-4 bg-white">
         <div class="max-w-xl mx-auto">
             <div class="text-center mb-12">
-                <h3 class="font-en text-[#d4a373] text-3xl md:text-4xl italic mb-1">RSVP</h3>
+                <h3 class="font-en-script text-[#d4a373] text-3xl md:text-4xl mb-1">RSVP</h3>
                 <p class="font-en text-xs tracking-[0.25em] text-[#8da399] uppercase mb-2">Kindly Respond</p>
-                <p class="text-base tracking-widest text-gray-700 font-medium mb-1">出席問卷</p>
-                <p class="text-sm tracking-widest text-gray-500">
+                <p class="text-base tracking-widest text-gray-700 font-medium mb-1 font-zh-script">出席問卷</p>
+                <p class="text-sm tracking-widest text-gray-500 font-zh-script">
                     <span class="whitespace-nowrap">誠摯邀請您與我們一同分享喜悅</span>
                 </p>
             </div>
@@ -327,7 +345,7 @@ HTML
                 <!-- 姓名 NAME -->
                 <div>
                     <label class="form-label mb-2">
-                        <span class="text-gray-700 tracking-wider font-medium">姓名</span>
+                        <span class="text-gray-700 tracking-wider font-medium font-zh-script">姓名</span>
                         <span class="form-label-en">NAME</span>
                     </label>
                     <input type="text" name="entry.580232985" placeholder="" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors" required>
@@ -336,10 +354,10 @@ HTML
                 <!-- 您是哪方の親友 SIDE -->
                 <div>
                     <label class="form-label mb-2">
-                        <span class="text-gray-700 tracking-wider font-medium">您是哪方の親友</span>
+                        <span class="text-gray-700 tracking-wider font-medium font-zh-script">您是哪方の親友</span>
                         <span class="form-label-en">SIDE</span>
                     </label>
-                    <select name="entry.898905706" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer" required>
+                    <select name="entry.898905706" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer font-zh-script" required>
                         <option value="" disabled selected>請選擇關係</option>
                         <option value="男方親友">男方親友</option>
                         <option value="女方親友">女方親友</option>
@@ -349,10 +367,10 @@ HTML
                 <!-- 是否出席 ATTENDANCE -->
                 <div>
                     <label class="form-label mb-2">
-                        <span class="text-gray-700 tracking-wider font-medium">是否出席</span>
+                        <span class="text-gray-700 tracking-wider font-medium font-zh-script">是否出席</span>
                         <span class="form-label-en">ATTENDANCE</span>
                     </label>
-                    <select name="entry.593622963" id="attendance-select" onchange="handleAttendanceChange()" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer" required>
+                    <select name="entry.593622963" id="attendance-select" onchange="handleAttendanceChange()" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer font-zh-script" required>
                         <option value="" disabled selected>請選擇是否出席</option>
                         <option value="當然會出席">當然會出席</option>
                         <option value="無法出席，獻上祝福">無法出席，獻上祝福</option>
@@ -362,10 +380,10 @@ HTML
                 <!-- 想給新人的話 -->
                 <div id="blessing-field" class="hidden space-y-2 pt-4 border-t border-dashed border-[#8da399]/30">
                     <label class="form-label mb-2">
-                        <span class="text-gray-700 tracking-wider font-medium">想給新人的話 / 祝福留言</span>
+                        <span class="text-gray-700 tracking-wider font-medium font-zh-script">想給新人的話 / 祝福留言</span>
                         <span class="form-label-en">Something you wanna tell us</span>
                     </label>
-                    <textarea name="entry.596556832" rows="3" placeholder="想對新人說的話..." class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors resize-none"></textarea>
+                    <textarea name="entry.596556832" rows="3" placeholder="想對新人說的話..." class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors resize-none font-zh-script"></textarea>
                 </div>
 
                 <!-- 條件式觸發隱藏區域 -->
@@ -374,10 +392,10 @@ HTML
                     <!-- 出席人數 GUESTS -->
                     <div>
                         <label class="form-label mb-2">
-                            <span class="text-gray-700 tracking-wider font-medium">出席人數</span>
+                            <span class="text-gray-700 tracking-wider font-medium font-zh-script">出席人數</span>
                             <span class="form-label-en">GUESTS</span>
                         </label>
-                        <select name="entry.666047726" id="guests-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
+                        <select name="entry.666047726" id="guests-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer font-zh-script">
                             <option value="" disabled selected>請選擇出席人數</option>
                             <option value="1人">1人</option>
                             <option value="2人">2人</option>
@@ -387,10 +405,10 @@ HTML
                     <!-- 飲食需求 DIETARY -->
                     <div>
                         <label class="form-label mb-2">
-                            <span class="text-gray-700 tracking-wider font-medium">飲食需求</span>
+                            <span class="text-gray-700 tracking-wider font-medium font-zh-script">飲食需求</span>
                             <span class="form-label-en">DIETARY</span>
                         </label>
-                        <select name="entry.1774380288" id="dietary-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
+                        <select name="entry.1774380288" id="dietary-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer font-zh-script">
                             <option value="" disabled selected>請選擇飲食需求</option>
                             <option value="葷食">葷食</option>
                             <option value="素食">素食</option>
@@ -400,10 +418,10 @@ HTML
                     <!-- 是否需要兒童椅 BABY CHAIR -->
                     <div>
                         <label class="form-label mb-2">
-                            <span class="text-gray-700 tracking-wider font-medium">是否需要兒童椅</span>
+                            <span class="text-gray-700 tracking-wider font-medium font-zh-script">是否需要兒童椅</span>
                             <span class="form-label-en">BABY CHAIR</span>
                         </label>
-                        <select name="entry.1981029119" id="baby-chair-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer">
+                        <select name="entry.1981029119" id="baby-chair-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer font-zh-script">
                             <option value="" disabled selected>請選擇兒童椅需求</option>
                             <option value="需要">需要</option>
                             <option value="不需要">不需要</option>
@@ -413,7 +431,7 @@ HTML
                 </div>
 
                 <!-- 送出按鈕 -->
-                <button type="submit" class="w-full mt-4 bg-[#8da399] hover:bg-[#d4a373] text-white py-4 rounded-xl tracking-[0.2em] transition-all duration-300 font-medium shadow-md hover:shadow-lg">
+                <button type="submit" class="w-full mt-4 bg-[#8da399] hover:bg-[#d4a373] text-white py-4 rounded-xl tracking-[0.2em] transition-all duration-300 font-medium shadow-md hover:shadow-lg font-zh-script">
                     確認送出 <span class="font-en ml-1 text-sm tracking-wider">SUBMIT</span>
                 </button>
             </form>
@@ -425,8 +443,8 @@ HTML
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                 </div>
-                <h4 class="text-3xl text-[#d4a373] mb-3 font-en italic">Thank You!</h4>
-                <p class="text-gray-700 tracking-widest leading-relaxed">我們已收到您的回函<br>期待在婚禮現場與您相見！</p>
+                <h4 class="text-2xl text-[#d4a373] mb-3 font-en-script">Thank You</h4>
+                <p class="text-gray-700 tracking-widest leading-relaxed font-zh-script">我們已收到您的回函<br>期待在婚禮現場與您相見！</p>
             </div>
         </div>
     </section>
@@ -435,16 +453,16 @@ HTML
     <section id="transport" class="py-24 px-4 bg-[var(--bg-alt)]">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
-                <h3 class="font-en text-[#d4a373] text-3xl md:text-4xl italic mb-1">Location & Guidance</h3>
+                <h3 class="font-en-script text-[#d4a373] text-3xl md:text-4xl mb-1">Location & Guidance</h3>
                 <p class="font-en text-xs tracking-[0.25em] text-[#8da399] uppercase mb-2">Getting There</p>
-                <p class="text-base tracking-widest text-gray-700 font-medium mb-1">交通指引</p>
-                <p class="text-sm tracking-widest text-gray-500">
+                <p class="text-base tracking-widest text-gray-700 font-medium mb-1 font-zh-script">交通指引</p>
+                <p class="text-sm tracking-widest text-gray-500 font-zh-script">
                     <span class="whitespace-nowrap">臺中市北屯區崇德路二段347號</span>
                 </p>
             </div>
 
             <!-- 摺疊面板組 -->
-            <div class="space-y-4 max-w-2xl mx-auto mb-12">
+            <div class="space-y-4 max-w-2xl mx-auto mb-12 font-zh-script">
                 <div class="bg-white rounded-xl shadow-sm border border-[#8da399]/20 overflow-hidden transition-all">
                     <button onclick="toggleAccordion(this)" class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
                         <span class="text-[#8da399] font-medium tracking-widest flex items-center gap-3 text-base">
