@@ -44,6 +44,20 @@
             font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
         }
 
+        /* 專門修飾全形與半形 & 符號，適中粗細與大小 */
+        .amp-symbol {
+            font-weight: 350 !important;
+            font-size: 0.85em;
+            display: inline-block;
+            vertical-align: baseline;
+            opacity: 0.9;
+        }
+
+        /* 封面專用符號調整：套用與程序碼一致的粗細設定 */
+        .amp-cover {
+            font-weight: normal;
+        }
+
         /* 毛玻璃導航列 Glassmorphism */
         .glass-nav {
             background: rgba(255, 255, 255, 0.82);
@@ -133,7 +147,7 @@
     <!-- 導航列 Header -->
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="font-en-script text-2xl text-[#8da399] tracking-wider">Lucas ＆ Karen</a>
+            <a href="#home" class="font-en-script text-2xl text-[#8da399] tracking-wider">Lucas <span class="amp-symbol">＆</span> Karen</a>
             
             <!-- 選單項目 (桌機版) -->
             <div class="space-x-10 hidden md:block text-[#8da399] font-en text-base tracking-widest font-medium">
@@ -174,7 +188,7 @@
         <div class="animate-fade-up text-center max-w-xl z-25 relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] mt-16 md:mt-20">
             <p class="text-lg md:text-xl tracking-[0.25em] mb-3 text-white/85 font-en font-normal">October 26, 2026</p>
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-en-script mb-3 md:mb-4 tracking-wide drop-shadow-sm text-white/95">
-                Lucas <span class="font-en text-2xl sm:text-3xl md:text-4xl mx-2 text-[#e5b282]/90">＆</span> Karen
+                Lucas <span class="font-en text-2xl sm:text-3xl md:text-4xl mx-2 text-[#e5b282]/90 amp-cover">＆</span> Karen
             </h1>
             <div class="my-3 flex flex-col items-center">
                 <div class="w-32 sm:w-36 md:w-40 h-[1px] bg-white/45 mb-1"></div>
@@ -451,7 +465,7 @@
     <section id="transport" class="py-24 px-4 bg-[var(--bg-alt)]">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
-                <h3 class="font-en-script text-[#d4a373] text-3xl md:text-4xl mb-1">Location ＆ Guidance</h3>
+                <h3 class="font-en-script text-[#d4a373] text-3xl md:text-4xl mb-1">Location <span class="amp-symbol">＆</span> Guidance</h3>
                 <p class="font-en text-xs tracking-[0.25em] text-[#8da399] uppercase mb-2">Getting There</p>
                 <p class="text-base tracking-widest text-gray-700 font-medium mb-1 font-zh-script">交通指引</p>
                 <p class="text-sm tracking-widest text-gray-500 font-zh-script">
@@ -510,7 +524,7 @@
 
     <!-- 頁尾 Footer -->
     <footer class="py-8 bg-white border-t border-gray-200/60 text-center text-xs text-gray-500 font-en tracking-widest">
-        Lucas ＆ Karen Wedding Invitation © 2026
+        Lucas <span class="amp-symbol">＆</span> Karen Wedding Invitation © 2026
     </footer>
 
     <!-- JavaScript 邏輯 -->
