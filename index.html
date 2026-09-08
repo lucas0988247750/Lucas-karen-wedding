@@ -176,12 +176,9 @@
             <h1 class="text-5xl sm:text-6xl md:text-8xl font-en-script mb-3 md:mb-4 tracking-wide drop-shadow-sm text-white/95">
                 Lucas <span class="text-3xl sm:text-4xl md:text-6xl mx-2 text-[#e5b282]/90">&</span> Karen
             </h1>
-            
-            <!-- 加入上下淡分隔線的「我們要結婚了」區塊 -->
-            <div class="my-3 py-2 border-t border-b border-white/30 max-w-[240px] mx-auto">
-                <p class="text-xl sm:text-2xl md:text-3xl tracking-[0.25em] text-white/95 font-zh-script font-normal">我們要結婚了</p>
+            <div class="my-3">
+                <p class="text-2xl sm:text-3xl md:text-4xl tracking-[0.2em] text-white/95 font-zh-script font-normal">我們要結婚了</p>
             </div>
-            
             <p class="font-en text-base sm:text-lg md:text-xl tracking-[0.3em] uppercase text-white/70 mt-3 font-normal">We're Getting Married</p>
         </div>
         
@@ -199,7 +196,7 @@
             <div class="text-center mb-12">
                 <h3 class="font-en-script text-[#d4a373] text-3xl md:text-4xl mb-1">Countdown</h3>
                 <p class="font-en text-xs tracking-[0.25em] text-[#8da399] uppercase mb-2">Time Until We Do</p>
-                <p class="text-sm tracking-[0.2em] text-gray-500 font-zh-script">倒數計時 迎接我們的美好時刻</p>
+                <p class="text-sm tracking-[0.2em] text-gray-500">倒數計時 迎接我們的美好時刻</p>
             </div>
             
             <div id="countdown-container" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
@@ -233,7 +230,7 @@
             <div class="text-center mb-16">
                 <h3 class="font-en-script text-[#d4a373] text-3xl md:text-4xl mb-1">Our Gallery</h3>
                 <p class="font-en text-xs tracking-[0.25em] text-[#8da399] uppercase mb-2">Sweet Moments</p>
-                <p class="text-base tracking-widest text-gray-700 font-medium font-zh-script">婚紗藝廊</p>
+                <p class="text-base tracking-widest text-gray-700 font-medium">婚紗藝廊</p>
                 <div class="w-12 h-0.5 bg-[#d4a373] mx-auto mt-4"></div>
             </div>
 
@@ -394,12 +391,9 @@
                     
                     <!-- 出席人數 GUESTS -->
                     <div>
-                        <label class="form-label mb-2 justify-between flex-wrap gap-1">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-gray-700 tracking-wider font-medium font-zh-script">出席人數</span>
-                                <span class="form-label-en">GUESTS</span>
-                            </div>
-                            <span class="text-xs text-[#d4a373] tracking-widest bg-[#d4a373]/10 px-2.5 py-0.5 rounded-full font-zh-script">因場地有限建議2人以內</span>
+                        <label class="form-label mb-2">
+                            <span class="text-gray-700 tracking-wider font-medium font-zh-script">出席人數</span>
+                            <span class="form-label-en">GUESTS</span>
                         </label>
                         <select name="entry.666047726" id="guests-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer font-zh-script">
                             <option value="" disabled selected>請選擇出席人數</option>
@@ -421,17 +415,13 @@
                         </select>
                     </div>
                     
-                    <!-- 是否需要兒童椅 BABY CHAIR -->
+                    <!-- 其他需求 Other requirements -->
                     <div>
                         <label class="form-label mb-2">
-                            <span class="text-gray-700 tracking-wider font-medium font-zh-script">是否需要兒童椅</span>
-                            <span class="form-label-en">BABY CHAIR</span>
+                            <span class="text-gray-700 tracking-wider font-medium font-zh-script">其他需求</span>
+                            <span class="form-label-en">Other requirements</span>
                         </label>
-                        <select name="entry.1981029119" id="baby-chair-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer font-zh-script">
-                            <option value="" disabled selected>請選擇兒童椅需求</option>
-                            <option value="需要">需要</option>
-                            <option value="不需要">不需要</option>
-                        </select>
+                        <input type="text" name="entry.1981029119" id="baby-chair-select" placeholder="如有其他需求請在此欄填寫" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors font-zh-script">
                     </div>
 
                 </div>
