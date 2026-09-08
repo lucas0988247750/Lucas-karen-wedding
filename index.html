@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Lucas & Karen | 婚禮邀請函</title>
+    <title>Lucas ＆ Karen | 婚禮邀請函</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: 導入 Cormorant Garamond 與 Noto Serif TC -->
@@ -31,13 +31,13 @@
         .font-en-script {
             font-family: 'Cormorant Garamond', serif;
             font-style: italic;
-            font-weight: 500;
+            font-weight: 450;
         }
 
         /* 柔和中文字體 (細緻思源宋體) */
         .font-zh-script {
             font-family: 'Noto Serif TC', serif;
-            font-weight: 400;
+            font-weight: 300;
         }
         
         .font-en {
@@ -167,19 +167,19 @@
         <!-- 背景圖片容器：使用 contain 讓整張照片完整呈現不被卡掉 -->
         <div class="absolute inset-0 z-0 flex items-center justify-center bg-[#e8e4dc]">
             <div class="absolute inset-0 bg-black/15 z-10"></div>
-            <img src="https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg" alt="Lucas & Karen 封面照" class="w-full h-full object-contain">
+            <img src="https://i.postimg.cc/MT7kjWMm/IMG-8834-(1).jpg" alt="Lucas ＆ Karen 封面照" class="w-full h-full object-contain">
         </div>
 
         <!-- 封面主標題 -->
         <div class="animate-fade-up text-center max-w-xl z-25 relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] mt-16 md:mt-20">
             <p class="text-lg md:text-xl tracking-[0.25em] mb-3 text-white/85 font-en font-normal">October 26, 2026</p>
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-en-script mb-3 md:mb-4 tracking-wide drop-shadow-sm text-white/95">
-                Lucas <span class="text-2xl sm:text-3xl md:text-4xl mx-2 text-[#e5b282]/90">&</span> Karen
+                Lucas <span class="font-en text-2xl sm:text-3xl md:text-4xl mx-2 text-[#e5b282]/90">＆</span> Karen
             </h1>
             <div class="my-3 flex flex-col items-center">
-                <div class="w-48 sm:w-56 md:w-64 h-[1px] bg-white/45 mb-2.5"></div>
-                <p class="text-base sm:text-lg md:text-xl tracking-[0.2em] text-white/95 font-zh-script font-normal">我們要結婚了</p>
-                <div class="w-48 sm:w-56 md:w-64 h-[1px] bg-white/45 mt-2.5"></div>
+                <div class="w-32 sm:w-36 md:w-40 h-[1px] bg-white/45 mb-1"></div>
+                <p class="text-xs sm:text-sm md:text-base tracking-[0.2em] text-white/95 font-zh-script font-normal">我們要結婚了</p>
+                <div class="w-32 sm:w-36 md:w-40 h-[1px] bg-white/45 mt-1"></div>
             </div>
             <p class="font-en text-xs sm:text-sm md:text-base tracking-[0.3em] uppercase text-white/70 mt-3 font-normal">We're Getting Married</p>
         </div>
@@ -385,7 +385,7 @@
                         <span class="text-gray-700 tracking-wider font-medium font-zh-script">想給新人的話 / 祝福留言</span>
                         <span class="form-label-en">Something you wanna tell us</span>
                     </label>
-                    <textarea name="entry.596556832" rows="3" placeholder="想對新人說的話..." class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors resize-none font-zh-script"></textarea>
+                    <textarea name="entry.596556832" rows="4" placeholder="想對新人說的話..." class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors resize-none font-zh-script"></textarea>
                 </div>
 
                 <!-- 條件式觸發隱藏區域 -->
@@ -398,7 +398,7 @@
                             <span class="form-label-en">GUESTS</span>
                         </label>
                         <select name="entry.666047726" id="guests-select" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors appearance-none cursor-pointer font-zh-script">
-                            <option value="" disabled selected>請選擇出席人數</option>
+                            <option value="" disabled selected>請選擇出席人數(含自己)</option>
                             <option value="1人">1人</option>
                             <option value="2人">2人</option>
                         </select>
@@ -423,7 +423,7 @@
                             <span class="text-gray-700 tracking-wider font-medium font-zh-script">其他需求</span>
                             <span class="form-label-en">Other requirements</span>
                         </label>
-                        <input type="text" name="entry.1981029119" id="baby-chair-select" placeholder="如有其他需求請在此欄填寫" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors font-zh-script">
+                       <textarea name="entry.1981029119" id="baby-chair-select" rows="2" placeholder="因場地有限，如有其他需求，歡迎先與我們聯繫，以利討論與後續安排哦！謝謝您的配合😇" class="w-full bg-white border border-[#8da399]/30 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:border-[#d4a373] focus:ring-1 focus:ring-[#d4a373] transition-colors font-zh-script resize-none"></textarea>
                     </div>
 
                 </div>
